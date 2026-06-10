@@ -1,0 +1,6 @@
+params.py
+*.txt
+*.zip
+*.bkp*
+__pycache__
+*test*
