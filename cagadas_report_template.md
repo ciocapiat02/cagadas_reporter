@@ -1,3 +1,9 @@
+---
+title: ALGORITMI DISTRIBUITI
+css: my-style.css
+toc: true
+---
+
 # 📊 💩 Poop Leaderboard Report
 
 ## 📅 Monthly Report: {{MONTH}}
