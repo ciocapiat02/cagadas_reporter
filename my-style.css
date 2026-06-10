@@ -1,18 +1,24 @@
 :root {
-    --r-black: #282828;
-    --r-green: #a9b665;
-    --r-red: #ea6962;
-    --r-blue: #7daea3;
-    --r-magenta: #d3869b;
-    --r-yellow: #d8a657;
-    --r-white: #d4be98;
-    --r-gray: #928374;
-    --r-greenbg: #a9b66533;
-    --r-redbg: #ea696233;
-    --r-bluebg: #7daea333;
-    --r-magentabg: #d3869b33;
-    --r-yellowbg: #d8a65733;
-    --r-graybg: #92837433;
+    --r-black  : #1b1b1b;
+    --r-red    : #ee5396;
+    --r-green  : #42be65;
+    --r-yellow : #ff7eb6;
+    --r-blue   : #33b1ff;
+    --r-magenta: #be95ff;
+    --r-cyan   : #3ddbd9;   
+    --r-white  : #ffffff;  
+    --r-gray   : #aaaaaa;  
+
+    --r-blackbg: #1b1b1b33;
+    --r-redbg: #ee539633;
+    --r-greenbg: #42be6533;
+    --r-yellowbg: #ff7eb633;
+    --r-bluebg: #33b1ff33;
+    --r-magentabg: #be95ff33;
+    --r-cyanbg: #3ddbd933;   
+    --r-whitebg: #ffffff33;  
+    --r-graybg   : #aaaaaa33;  
+
     --r-background-color: var(--r-black);
     --r-main-font: Source Sans Pro, Helvetica, sans-serif;
     --r-main-font-size: 25px;
