@@ -85,19 +85,33 @@ def plot_month_for_name(data: pd.DataFrame, name: str):
              .reindex(full_range, fill_value=0)
     )
 
-    plt.figure(figsize=(10, 4))
+    plt.figure(figsize=(10, 4), facecolor=params.PLOT_COLORS["background"])
     plt.plot(
         daily_counts.index.astype(str),
         daily_counts.values,
         linewidth=2,
-        marker="o"
+        marker="o",
+        markerfacecolor=params.PLOT_COLORS["marker"],
+        markeredgecolor=params.PLOT_COLORS["marker"],
+        color=params.PLOT_COLORS["marker"],
     )
 
     ax = plt.gca()
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
+    ax.xaxis.label.set_color(params.PLOT_COLORS["foreground"])
+    ax.yaxis.label.set_color(params.PLOT_COLORS["foreground"])
+    ax.set_facecolor(params.PLOT_COLORS["background"])
+    ax.spines['bottom'].set_color(params.PLOT_COLORS["foreground"])
+    ax.spines['top'].set_color(params.PLOT_COLORS["foreground"])
+    ax.spines['left'].set_color(params.PLOT_COLORS["foreground"])
+    ax.spines['right'].set_color(params.PLOT_COLORS["foreground"])
+    ax.title.set_color(params.PLOT_COLORS["foreground"])
+    ax.tick_params(axis='x', colors=params.PLOT_COLORS["foreground"])
+    ax.tick_params(axis='y', colors=params.PLOT_COLORS["foreground"])
 
     plt.title(f"{name}'s cagadas")
     plt.xlabel("date")
+    
     plt.ylabel("cagadas")
 
     plt.xticks(rotation=45)
