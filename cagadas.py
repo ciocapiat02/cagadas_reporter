@@ -110,9 +110,9 @@ def plot_month_for_name(data: pd.DataFrame, name: str):
     ax.tick_params(axis='y', colors=params.PLOT_COLORS["foreground"])
 
     plt.title(f"{name}'s cagadas")
-    plt.xlabel("date")
+    plt.xlabel("Date")
     
-    plt.ylabel("cagadas")
+    plt.ylabel("Cagadas")
 
     plt.xticks(rotation=45)
     plt.tight_layout()
