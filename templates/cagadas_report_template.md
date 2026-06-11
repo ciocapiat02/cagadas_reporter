@@ -1,6 +1,6 @@
 ---
 title: {{MONTH}} CAGADAS REPORT
-css: my-style.css
+css: output/my-style.css
 toc: true
 ---
 

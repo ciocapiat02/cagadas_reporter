@@ -103,10 +103,10 @@ def plot_month_for_name(data: pd.DataFrame, name: str):
     plt.xticks(rotation=45)
     plt.tight_layout()
 
-    plt.savefig(f"output/{name}s_cagadas.png")
+    plt.savefig(f"{params.OUTPUT_DIR}/{name}s_cagadas.png")
     plt.close()
 
-    return f"output/{name}s_cagadas.png"
+    return f"{params.OUTPUT_DIR}/{name}s_cagadas.png"
 
 def build_table(df):
     df = df.reset_index(drop=True)
@@ -129,7 +129,7 @@ def fill_personal_statistics(images):
 
 
 def fill_md(data: pd.DataFrame, images: dict):
-    with open("cagadas_report_template.md", "r") as f:
+    with open(params.REPORT_TEMPLATE, "r") as f:
         template = f.read()
     monthly = get_monthly_score(data, 6)
     yearly = get_yearly_score(data, 2026)
@@ -162,7 +162,7 @@ def main():
         image = plot_month_for_name(data, name)
         image_files[name] = image
     final_md = fill_md(data, image_files)
-    save_report(final_md, "cagadas_report.md")
+    save_report(final_md, params.REPORT_FILENAME)
 
 
 if __name__=='__main__':
